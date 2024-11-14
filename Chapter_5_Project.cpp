@@ -1,7 +1,8 @@
 // Thomas Cubstead
 // 11/14/24
 // Chapter_5_Project
-// Main
+// 2_Student_Lineup
+// This program will read out a list of names and print out the number of names that were accounted for in the list
 
 #include <iostream>
 using namespace std;
