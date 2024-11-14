@@ -5,11 +5,45 @@
 // This program asks the user to select a file of population statistics then uses the information within to show the data in a bar chart rounding to the nearest 1000 people
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	string townName, filename;
+	cout << "enter the name of a town" << endl;
+	getline(cin, townName);
+	cout << "enter the name of the data file" << endl;
+	getline(cin, filename);
+
+	ifstream inputFile(filename);
+	if (!inputFile) {
+		cerr << "error opening the wrong file." << endl;
+		return 1;
+	}
+
+	cout << "\n" << townName << " population growth" << endl;
+	cout << "(*'s = 1000 people)" << endl;
+
+	string line;
+
+	while (getline(inputFile, line)) {
+		stringstream ss(line);
+		int year, population;
+
+		ss >> year >> population;
+
+		int stars = population / 1000;
+		cout << year << " ";
+		
+		for (int i = 0; i < stars; ++i) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+	inputFile.close();
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
