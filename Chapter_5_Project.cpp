@@ -1,7 +1,7 @@
 // Thomas Cubstead
 // 11/14/24
 // Chapter_5_Project
-// Main
+// Population
 
 #include <iostream>
 using namespace std;
