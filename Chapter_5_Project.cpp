@@ -38,7 +38,14 @@ int main() {
 	growth = growth / 100;
 
 	cout << fixed << setprecision(0);
-	cout << "\nDay 0 " << intpop << " organisms\n";
+	cout << "\nDay 0 " << "population is " << intpop << endl;
+
+	double finalpop = intpop;
+	for (int days = 1; days <= time; ++days) {
+		finalpop += finalpop * growth;
+		cout << "day " << days << " population is " << finalpop << endl;
+	}
+	return 0;
 
 }
 
