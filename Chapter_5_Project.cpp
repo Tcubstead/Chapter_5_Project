@@ -1,7 +1,8 @@
 // Thomas Cubstead
 // 11/14/24
 // Chapter_5_Project
-// Main
+// E_Random_Number_Guessing_Game
+// This program will use loops to compare user input against a randomized value and will keep running until the user guesses the right number
 
 #include <iostream>
 using namespace std;
