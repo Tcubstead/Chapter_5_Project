@@ -1,7 +1,8 @@
 // Thomas Cubstead
 // 11/14/24
 // Chapter_5_Project
-// Main
+// E_Patterns
+// this program will print the given pattern provided using nested loops
 
 #include <iostream>
 using namespace std;
