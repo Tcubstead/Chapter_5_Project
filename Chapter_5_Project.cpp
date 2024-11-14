@@ -2,7 +2,7 @@
 // 11/14/24
 // Chapter_5_Project
 // Population
-
+//This code will acurrately predict the growth of a population based on user input of base population and rate of change
 #include <iostream>
 using namespace std;
 
