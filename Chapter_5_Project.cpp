@@ -16,7 +16,7 @@ int main() {
 	vector<string> students;
 	string name;
 
-	ifstream inputfile("lineup.txt");
+	ifstream inputfile("LineUp.txt");
 
 	if (!inputfile) {
 		cout << "error wrong file" << endl;
