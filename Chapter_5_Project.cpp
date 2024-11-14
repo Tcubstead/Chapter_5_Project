@@ -5,11 +5,44 @@
 // This program will read out a list of names and print out the number of names that were accounted for in the list
 
 #include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	//stores names
+	vector<string> students;
+	string name;
+
+	ifstream inputfile("lineup.txt");
+
+	if (!inputfile) {
+		cout << "error wrong file" << endl;
+		return 1;
+	}
+
+	while (getline(inputfile, name)) {
+		students.push_back(name);
+	}
+
+	inputfile.close();
+
+	if (students.empty()) {
+		cout << "there are no students in this file" << endl;
+		return 0;
+	}
+
+	sort(students.begin(), students.end());
+
+	//output
+	cout << "Total number of students: " << students.size() << endl;
+	cout << "The student at the front of the line: " << students.front() << endl;
+	cout << "The student at the end of the line: " << students.back() << endl;
+
+
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
