@@ -1,7 +1,10 @@
-// Chapter_5_Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Thomas Cubstead
+// 11/14/24
+// Chapter_5_Project
+// Main
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
