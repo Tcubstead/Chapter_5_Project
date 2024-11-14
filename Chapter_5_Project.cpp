@@ -4,11 +4,42 @@
 // Population
 //This code will acurrately predict the growth of a population based on user input of base population and rate of change
 #include <iostream>
+#include  <iomanip>
 using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+	int intpop;
+	double growth;
+	int time;
+	do {
+		cout << "enter the base population size you are examining\n";
+		cin >> intpop;
+		if (intpop < 2) {
+			cout << "error population can not be less than 2\n";
+		}
+	} while (intpop < 2);
+	
+	do {
+		cout << "enter the rate of growth for the population as a percentage increase\n";
+		cin >> growth;
+			if (growth < 0) {
+				cout << "error growth rate can not be negative\n";
+		}
+	} while (growth < 0);
+	
+	do {
+		cout << "enter the time in days you wish to know the population after\n";
+		cin >> time;
+		if (time < 0) {
+			cout << "error time must be at least one day\n";
+		}
+	} while (time < 1);
+
+	growth = growth / 100;
+
+	cout << fixed << setprecision(0);
+	cout << "\nDay 0 " << intpop << " organisms\n";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
