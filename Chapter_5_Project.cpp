@@ -1,7 +1,8 @@
 // Thomas Cubstead
 // 11/14/24
 // Chapter_5_Project
-// Main
+// 3_Population_Bar_Chart
+// This program asks the user to select a file of population statistics then uses the information within to show the data in a bar chart rounding to the nearest 1000 people
 
 #include <iostream>
 using namespace std;
