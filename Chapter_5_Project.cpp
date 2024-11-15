@@ -18,7 +18,7 @@ int main() {
 	getline(cin, filename);
 
 	ifstream inputFile(filename);
-	if (!inputFile) {
+````````	if (!inputFile) {
 		cerr << "error opening the wrong file." << endl;
 		return 1;
 	}
