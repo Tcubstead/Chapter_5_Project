@@ -18,22 +18,26 @@ int main() {
 
 	ifstream inputfile("LineUp.txt");
 
+	//verify that the right file is opened
 	if (!inputfile) {
 		cout << "error wrong file" << endl;
 		return 1;
 	}
 
+	//read the names and add them to the vector
 	while (getline(inputfile, name)) {
 		students.push_back(name);
 	}
 
 	inputfile.close();
 
+	//ends program if nobody is in the list
 	if (students.empty()) {
 		cout << "there are no students in this file" << endl;
 		return 0;
 	}
 
+	//find the first and last student in the line
 	sort(students.begin(), students.end());
 
 	//output
